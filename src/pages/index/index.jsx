@@ -46,6 +46,7 @@ export default function Index() {
     console.log('Page loaded.')
   })
 
+  
   return (
     <div>
       <Text>滚动加载</Text>
