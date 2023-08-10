@@ -1,6 +1,7 @@
 # taro-loadMore
 taro滚动加载，下拉刷新
 
+### Props
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | hasMore | 是否还有更多数据 | `boolean` | `true` |
