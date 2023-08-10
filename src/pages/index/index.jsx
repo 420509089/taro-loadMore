@@ -1,5 +1,5 @@
 import { Text } from '@tarojs/components'
-import { useLoad } from '@tarojs/taro'
+import Taro,{ useLoad } from '@tarojs/taro'
 import { LoadMore } from '@/components'
 import { useState, useEffect } from "react"
 import style from "./index.module.scss";
@@ -26,7 +26,16 @@ export default function Index() {
       done()
     }, 500)
   }
-
+  const refresh = (done) => {
+    setTimeout(() => {
+			Taro.showToast({
+				title: '刷新成功',
+				duration: 1500,
+				mask: true
+			});
+      done()
+    }, 1000)
+  }
   const init = () => {
     for (let i = 0; i < 10; i++) {
       defaultList.push(`${i}`)
@@ -46,6 +55,8 @@ export default function Index() {
           hasMore={hasMore}
           onLoadMore={loadMore}
           threshold={200}
+          pullRefresh
+          onRefresh={refresh}
         >
             {defaultList.map((item, index) => {
               return (
