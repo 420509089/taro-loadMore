@@ -164,7 +164,7 @@ export const LoadMore = memo((props) => {
         ) : (
           !hasMore && (
             <div className="tips">
-              {loadMoreText || '哎呀，这里是底部了啦'}
+              {loadMoreText || '没有更多了'}
             </div>
           )
         )}
