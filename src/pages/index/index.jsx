@@ -50,7 +50,7 @@ export default function Index() {
   return (
     <div>
       <Text>滚动加载</Text>
-      <ul id="scroll" className={style.list}>
+      <ul id="scroller" className={style.list}>
         <LoadMore 
           target='scroller' 
           hasMore={hasMore}
